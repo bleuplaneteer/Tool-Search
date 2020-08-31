@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tool Finder</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  
+<body>
+  <div>
+    <h1>Search for a Tool</h1>
+    <div>
+      <label for="mediaType">Media Type:</label>
+      <select name="Media Type" id="mediaType"> <option value="Animation">Animation</option>
+        <option value="Video">Video</option>
+        <option value="Project Planning"> Project Planning</option>
+        <option value="Storytelling">Storytelling</option>
+        <option value="Writing/Editing">Writing/Editing</option>
+        </select>
+      <label for="diffLevel">Difficulty Level:</label>
+      <select name="diffLevel" id="difficultyLevel">
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+      </select>   
+      <button type="button" onclick="findTools()">Submit</button>
+    </div>
+    <div>
+      <div id="Rise" style="display:none">Articulate Rise</div>
+      <div id="Vyond" style="display:none">Vyond</div>
+      <div id="Hemmingway" style="display:none" >Hemmingway</div>
+      <div id="H5P" style="display:none" >H5P</div>
+      <div id="Screencast-o-matic" style="display:none" >Screencast-o-matic</div>
+      <div id="Padlet" style="display:none" >Padlet</div>
+      <div id="Hypothes.is" style="display:none" >Hypothes.is</div>
+      <div id="Twine" style="display:none" >Twine</div>
+    </div>
+    
+  </div>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
