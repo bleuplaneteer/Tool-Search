@@ -4,7 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>Tool Finder</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" rel="stylesheet">
+    <style>
+    .content {
+  border-bottom: solid grey 1px;
+  padding: 10px;
+}
+    </style>
+  <script src=".findTools.js"></script>
   </head>
   
 <body>
@@ -26,20 +33,58 @@
       </select>   
       <button type="button" onclick="findTools()">Submit</button>
     </div>
-    <div>
+    <div id="container">
       <div id="Rise" style="display:none">Articulate Rise</div>
-      <div id="Vyond" style="display:none">Vyond</div>
-      <div id="Hemmingway" style="display:none" >Hemmingway</div>
-      <div id="H5P" style="display:none" >H5P</div>
-      <div id="Screencast-o-matic" style="display:none" >Screencast-o-matic</div>
-      <div id="Padlet" style="display:none" >Padlet</div>
-      <div id="Hypothes.is" style="display:none" >Hypothes.is</div>
-      <div id="Twine" style="display:none" >Twine</div>
+      <div id="Vyond" style="display:none; margin-bottom: 10px;">
+        <div class="content">
+          <h3>Vyond</h3>
+          <h5>What is it & what can it do?</h5>
+          <p>Use cases – When a complex idea can be simplified into chunks, and visual representations are helpful, Vyond might be a good fit.
+When it is not necessary/appropriate to hire actors to play parts, or when backgrounds/scenarios are not possible to recreate live.</p>    
+          <p>Examples:
+            <ul>
+              <li><a href="https://app.vyond.com/videos/40cea3ca-91b5-41f1-be5f-97111f20f51a" target="_blank">Using evidence in writing</a></li>
+              <li><a href="https://app.vyond.com/videos/2e876c25-72bd-4d8f-9a49-8c743257d82a" target="_blank">EDU 709 - Welcome</a></li>
+              <li><a href="https://app.vyond.com/videos/b365ac83-72ad-42b5-857f-04661dafd88a" target="_blank">SSWO 633 - Visit with Vee</a></li>
+             </ul>
+          </p>
+        </div>
     </div>
+      <div id="Hemmingway" style="display:none">Hemmingway</div>
+      <div id="H5P" style="display:none">
+        <div class="content">
+          <h3>H5P</h3>
+          <h5>What is it and what can it do?</h5>
+          <p>Use Cases - Content presentation lending to chunking of info. Very easy to make visually appealing. One of the easiest ways to add a variety of interactive elements to engage with content. Feedback can be prewritten for all wrong or correct answers in interactive Embeds well in LMS even without integration</p>
+          <p>Examples:
+            <ul>
+              <li><a href="https://h5p.org/presentation#example=612" target="_blank">From H5P</a></li>
+              <li><a href="https://canvas.instructure.com/courses/1605829/pages/writing-stems-to-target-objectives" target="_blank">Writing Multiple Choice Stems</a></li>
+            </ul>
+          </p>
+          <p>Planning considerations:
+            <ul>
+              <li>What are the major highlights from a topic or module you want students to take away?</li>
+              <li>At what points will it be best to have students review or practice content with interactions?</li>
+            </ul>
+          </p>
+          <p> Limitations:
+            <ul>
+              <li>Not best for narrated stuff</li>
+              <li>Can upload audio files per slides, but not captioning</li>
+              <li>Cannot collect data without proper LMS integration</li>
+            </ul>
+          </p>
+
+        </div>
+      </div>
+      <div id="Screencast-o-matic" style="display:none">Screencast-o-matic</div>
+      <div id="Padlet" style="display:none">Padlet</div>
+      <div id="Hypothes.is" style="display:none"></a>Hypothes.is</div>
+      <div id="Twine" style="display:none">Twine</div>
+    </div>
+
     
   </div>
 </body>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src=".findTools.js"></script>
