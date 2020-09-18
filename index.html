@@ -63,6 +63,8 @@ function findTools() {
   for (let i=0; i<tools.length; i++) {
     if (tools[i].type.includes(mediaTypeSel.value) && difficultySel.value === tools[i].spice) {
     document.getElementById(tools[i].name).style.display = 'block';
+  } else if (tools[i].type.includes(mediaTypeSel.value) && difficultySel.value === "All") {
+    document.getElementById(tools[i].name).style.display = 'block';
   } else {
     document.getElementById(tools[i].name).style.display = 'none';
   }
@@ -90,6 +92,7 @@ function findTools() {
         <option value="Easy">Easy</option>
         <option value="Medium">Medium</option>
         <option value="Hard">Hard</option>
+        <option value="All">All</option>
       </select>   
       <button type="button" onclick="findTools()">Submit</button>
     </div>
