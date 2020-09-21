@@ -2,7 +2,16 @@ html {
   font-family: "Lato",sans-serif;
 }
 header {
+  background-color: white;
   padding-bottom: 50px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+.sticky + .container {
+  padding-top: 102px;
 }
 header .search-bar {
   display: flex;
