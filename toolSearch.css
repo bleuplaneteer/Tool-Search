@@ -11,9 +11,6 @@ header .search-bar {
   flex-direction: row;
   gap: 10px;
 }
-header .label {
-  padding-top: 5px;
-}
 .content {
   display: flex;
   flex-direction: column;
