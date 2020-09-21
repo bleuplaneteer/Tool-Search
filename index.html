@@ -5,149 +5,180 @@
     <meta charset="utf-8">
     <title>Tool Finder</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" rel="stylesheet">
-    <style>
-    .content {
-  border-bottom: solid grey 1px;
-  padding: 10px;
-}
-    </style>
-  <script src=".findTools.js"></script>
-    <script>
-    var tools = [
-  {
-    name: "Rise",
-    type: "Writing/Editing",
-    spice: "Hard"
-  },
-  {
-    name: "Vyond",
-    type: "Animation, Video",
-    spice: "Medium"
-  },
-  {
-    name: "Hemmingway",
-    type: "Writing/Editing",
-    spice: "Easy"
-  },
-  {
-    name: "H5P",
-    type: "Video",
-    spice: "Medium"
-  },
-  {
-    name: "Screencast-o-matic",
-    type: "Video",
-    spice: "Medium"
-  },
-  {
-    name: "Padlet",
-    type: "Project Planning, Writing/Editing",
-    spice: "Easy"
-  },
-  {
-    name: "Hypothes.is",
-    type: "Writing/Editing",
-    spice: "Easy"
-  },
-  {
-    name: "Twine",
-    type: "Storytelling",
-    spice: "Medium"
-  }
-];
-
-function findTools() {
-  var mediaTypeSel = document.getElementById("mediaType");
-  var difficultySel = document.getElementById("difficultyLevel");
-    
-  for (let i=0; i<tools.length; i++) {
-    if (tools[i].type.includes(mediaTypeSel.value) && difficultySel.value === tools[i].spice) {
-    document.getElementById(tools[i].name).style.display = 'block';
-  } else if (tools[i].type.includes(mediaTypeSel.value) && difficultySel.value === "All") {
-    document.getElementById(tools[i].name).style.display = 'block';
-  } else {
-    document.getElementById(tools[i].name).style.display = 'none';
-  }
-  
-  }
-  }
-
-
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="toolSearch.css">
+  <script src="findTools.js"></script>
   </head>
   
-<body>
-  <div>
-    <h1>Search for a Tool</h1>
-    <div>
+<header class="banner">
+  <h1 class="search-bar">Search for a Tool</h1>
+  <div class="search-bar">
+    <div class="label">
       <label for="mediaType">Media Type:</label>
-      <select name="Media Type" id="mediaType"> <option value="Animation">Animation</option>
+    </div>
+    <div class="input-drop">
+      <select name="mediaType" id="mediaType" class="dropDown btn btn-primary">
+        <option value="Animation">Animation</option>
         <option value="Video">Video</option>
         <option value="Project Planning"> Project Planning</option>
         <option value="Storytelling">Storytelling</option>
         <option value="Writing/Editing">Writing/Editing</option>
-        </select>
-      <label for="diffLevel">Difficulty Level:</label>
-      <select name="diffLevel" id="difficultyLevel">
+      </select>
+
+    </div>
+    <div class="label">
+      <label for="diffLevel">Difficulty Level: </label>
+    </div>
+    <div class="input-drop">
+      <select name="diffLevel" id="difficultyLevel" class="dropDown btn btn-primary">
         <option value="Easy">Easy</option>
         <option value="Medium">Medium</option>
         <option value="Hard">Hard</option>
         <option value="All">All</option>
-      </select>   
-      <button type="button" onclick="findTools()">Submit</button>
+      </select>
     </div>
-    <div id="container">
-      <div id="Rise" style="display:none">Articulate Rise</div>
-      <div id="Vyond" style="display:none; margin-bottom: 10px;">
-        <div class="content">
-          <h3>Vyond</h3>
-          <h5>What is it & what can it do?</h5>
-          <p>Use cases – When a complex idea can be simplified into chunks, and visual representations are helpful, Vyond might be a good fit.
-When it is not necessary/appropriate to hire actors to play parts, or when backgrounds/scenarios are not possible to recreate live.</p>    
-          <p>Examples:
-            <ul>
-              <li><a href="https://app.vyond.com/videos/40cea3ca-91b5-41f1-be5f-97111f20f51a" target="_blank">Using evidence in writing</a></li>
-              <li><a href="https://app.vyond.com/videos/2e876c25-72bd-4d8f-9a49-8c743257d82a" target="_blank">EDU 709 - Welcome</a></li>
-              <li><a href="https://app.vyond.com/videos/b365ac83-72ad-42b5-857f-04661dafd88a" target="_blank">SSWO 633 - Visit with Vee</a></li>
-             </ul>
-          </p>
+    <div class="submit-button">
+      <button class="btn btn-success fas fa-search" type="button" onclick="findTools()"></button>
+    </div>
+  </div>
+</header>
+
+<body>
+  <div class="container">
+    <div class="content">
+      <div id="Rise" style="display:none">
+        <div class="inner-content">
+          <div class="resource-name">
+            <h3>Articulate Rise</h3>
+          </div>
+          <div class="description">
+
+          </div>
         </div>
-    </div>
-      <div id="Hemmingway" style="display:none">Hemmingway</div>
+      </div>
+      <div id="Vyond" style="display:none">
+        <div class="inner-content">
+          <div class="resource-name">
+            <h2>Vyond</h2>
+          </div>
+          <div class="description">
+            <div class="video">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/KP8EC9r0tJ0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            <hr>
+            <h5>What is it & what can it do?</h5>
+            <p>Use cases – When a complex idea can be simplified into chunks, and visual representations are helpful, Vyond might be a good fit.
+              When it is not necessary/appropriate to hire actors to play parts, or when backgrounds/scenarios are not possible to recreate live.</p>
+            <p>Examples:
+              <ul>
+                <li><a href="https://app.vyond.com/videos/40cea3ca-91b5-41f1-be5f-97111f20f51a" target="_blank">Using evidence in writing</a></li>
+                <li><a href="https://app.vyond.com/videos/2e876c25-72bd-4d8f-9a49-8c743257d82a" target="_blank">EDU 709 - Welcome</a></li>
+                <li><a href="https://app.vyond.com/videos/b365ac83-72ad-42b5-857f-04661dafd88a" target="_blank">SSWO 633 - Visit with Vee</a></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="Hemmingway" style="display:none">
+        <div class="inner-content">
+          <div class="resource-name">
+            <h3>Hemmingway</h3>
+          </div>
+          <div class="description">
+
+          </div>
+        </div>
+      </div>
       <div id="H5P" style="display:none">
-        <div class="content">
-          <h3>H5P</h3>
-          <h5>What is it and what can it do?</h5>
-          <p>Use Cases - Content presentation lending to chunking of info. Very easy to make visually appealing. One of the easiest ways to add a variety of interactive elements to engage with content. Feedback can be prewritten for all wrong or correct answers in interactive Embeds well in LMS even without integration</p>
-          <p>Examples:
-            <ul>
-              <li><a href="https://h5p.org/presentation#example=612" target="_blank">From H5P</a></li>
-              <li><a href="https://canvas.instructure.com/courses/1605829/pages/writing-stems-to-target-objectives" target="_blank">Writing Multiple Choice Stems</a></li>
-            </ul>
-          </p>
-          <p>Planning considerations:
-            <ul>
-              <li>What are the major highlights from a topic or module you want students to take away?</li>
-              <li>At what points will it be best to have students review or practice content with interactions?</li>
-            </ul>
-          </p>
-          <p> Limitations:
-            <ul>
-              <li>Not best for narrated stuff</li>
-              <li>Can upload audio files per slides, but not captioning</li>
-              <li>Cannot collect data without proper LMS integration</li>
-            </ul>
-          </p>
+        <div class="inner-content">
+          <div class="resource-name">
+            <h3>H5P</h3>
+          </div>
+          <div class="description">
+            <h5>What is it and what can it do?</h5>
+            <p>Use Cases - Content presentation lending to chunking of info. Very easy to make visually appealing. One of the easiest ways to add a variety of interactive elements to engage with content. Feedback can be prewritten for all wrong or correct answers in interactive Embeds well in LMS even without integration</p>
+            <p>Examples:
+              <ul>
+                <li><a href="https://h5p.org/presentation#example=612" target="_blank">From H5P</a></li>
+                <li><a href="https://canvas.instructure.com/courses/1605829/pages/writing-stems-to-target-objectives" target="_blank">Writing Multiple Choice Stems</a></li>
+              </ul>
+            </p>
+            <p>Planning considerations:
+              <ul>
+                <li>What are the major highlights from a topic or module you want students to take away?</li>
+                <li>At what points will it be best to have students review or practice content with interactions?</li>
+              </ul>
+            </p>
+            <p> Limitations:
+              <ul>
+                <li>Not best for narrated stuff</li>
+                <li>Can upload audio files per slides, but not captioning</li>
+                <li>Cannot collect data without proper LMS integration</li>
+              </ul>
+            </p>
+          </div>
 
         </div>
       </div>
-      <div id="Screencast-o-matic" style="display:none">Screencast-o-matic</div>
-      <div id="Padlet" style="display:none">Padlet</div>
-      <div id="Hypothes.is" style="display:none"></a>Hypothes.is</div>
-      <div id="Twine" style="display:none">Twine</div>
+      <div id="Screencast-o-matic" style="display:none">
+        <div class="inner-content">
+          <div class="resource-name">
+            <h3>Screencast-o-matic</h3>
+          </div>
+          <div class="description">
+            <p><strong>What is it?</strong></p>
+            <p>Screen and/or Webcam recording software </p>
+            <p><strong>What can it do?</strong></p>
+            <ul>
+              <li>Records audio, screen, and webcam (if desired)</li>
+              <li>Has annotation tools available if needed</li>
+              <li>Primarily used for lectures</li>
+              <li>Recording lectures</li>
+              <li>(more advanced) editing lectures, zoom, add highlights or simple graphic elements (add annotation after the fact)</li>
+            </ul>
+            <p><strong>Planning Considerations:</strong>
+            </p>
+            <ul>
+              <li>Some time to learn the software, then mostly recording time</li>
+              <li>IDS can help with edits</li>
+              <li>Schedule ~1 hour training with IDS, more if interested in more advanced editing (unless you already know SCOM)</li>
+            </ul>
+            <p><strong>Limitations:</strong></p>
+            <ul>
+              <li>More robust edits may be needed</li>
+              <li>25 seats</li>
+              <li>Webcam can move around, but if you aren’t aware it may cover content</li>
+              <li>We need SMEs to send SOMREC files if we need to edit webcam placement</li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+      <div id="Padlet" style="display:none">
+        <div class="inner-content">
+          <div class="resource-name">
+            <h3>Padlet</h3>
+          </div>
+          <div class="description"></div>
+        </div>
+      </div>
+      <div id="Hypothes.is" style="display:none">
+        <div class="inner-content">
+          <div class="resource-name">
+            <h3>Hypothes.is</h3>
+          </div>
+          <div class="description"></div>
+        </div>
+      </div>
+      <div id="Twine" style="display:none">
+        <div class="inner-content">
+          <div class="resource-name">
+            <h3>Twine</h3>
+          </div>
+          <div class="description"></div>
+        </div>
+      </div>
     </div>
-
-    
   </div>
 </body>
 
+</html>
