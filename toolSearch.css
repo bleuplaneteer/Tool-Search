@@ -33,9 +33,11 @@ header .label {
 }
 .btn-drop:hover {
   background-color: #7db7d2;
+  color: white;
 }
 .btn-drop:focus {
   background-color: #7db7d2;
+  color: white;
 }
 .btn-submit {
   background-color: #163e70;
@@ -44,10 +46,12 @@ header .label {
 }
 .btn-submit:hover {
   background-color: #163e70;
+  color: white;
 }
 .btn-submit:focus {
   background-color: #163e70;
   border-color: #163e70;
+  color: white;
 }
 .video {
   display: flex;
