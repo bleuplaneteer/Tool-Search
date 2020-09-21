@@ -44,13 +44,17 @@ var tools = [
 function findTools() {
   var mediaTypeSel = document.getElementById("mediaType");
   var difficultySel = document.getElementById("difficultyLevel");
-  
+    
   for (let i=0; i<tools.length; i++) {
     if (tools[i].type.includes(mediaTypeSel.value) && difficultySel.value === tools[i].spice) {
     document.getElementById(tools[i].name).style.display = 'block';
-  } else {
+  } else if (tools[i].type.includes(mediaTypeSel.value) && difficultySel.value === "All") {
+    document.getElementById(tools[i].name).style.display = 'block';
+  }
+    else {
     document.getElementById(tools[i].name).style.display = 'none';
   }
   
   }
   }
+
