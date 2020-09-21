@@ -10,9 +10,6 @@ header {
   top: 0;
   width: 100%
 }
-.container {
-  margin: 50px;
-}
 header .search-bar {
   display: flex;
   justify-content: center;
@@ -25,9 +22,13 @@ header .label {
   padding-top: 5px;
   color: black;
 }
+.container {
+  margin: 50px;
+}
 .content {
   display: flex;
   flex-direction: column;
+  padding-top: 100px;
 }
 .inner-content {
   background: #EEEEEE;
