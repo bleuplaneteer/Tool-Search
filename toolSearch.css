@@ -26,24 +26,24 @@ header .label {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.btn-primary {
+.btn {
   background-color: #7db7d2;
   border-color: #7db7d2;
 }
-.btn-primary:hover {
+.btn:hover {
   background-color: #7db7d2;
 }
-.btn-primary:focus {
+.btn:focus {
   background-color: #7db7d2;
 }
-.btn-success {
+.btn-submit {
   background-color: #163e70;
   border-color:#163e70
 }
-.btn-success:hover {
+.btn-submit:hover {
   background-color: #163e70;
 }
-.btn-success:focus {
+.btn-submit:focus {
   background-color: #163e70;
   border-color: #163e70;
 }
