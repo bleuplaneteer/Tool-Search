@@ -26,14 +26,14 @@ header .label {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.btn {
+.btn-drop {
   background-color: #7db7d2;
   border-color: #7db7d2;
 }
-.btn:hover {
+.btn-drop:hover {
   background-color: #7db7d2;
 }
-.btn:focus {
+.btn-drop:focus {
   background-color: #7db7d2;
 }
 .btn-submit {
