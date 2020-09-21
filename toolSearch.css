@@ -10,7 +10,7 @@ header {
   top: 0;
   width: 100%
 }
-.sticky + .container {
+.container {
   padding-top: 102px;
 }
 header .search-bar {
