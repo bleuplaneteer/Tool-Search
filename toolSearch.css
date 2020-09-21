@@ -11,7 +11,7 @@ header {
   width: 100%
 }
 .container {
-  padding-top: 102px;
+  margin: 50px;
 }
 header .search-bar {
   display: flex;
