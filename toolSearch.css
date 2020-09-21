@@ -48,6 +48,10 @@ header .label {
   background-color: #7db7d2;
   color: white;
 }
+btn-drop:active {
+  background-color: #7db7d2;
+  color: white;
+}
 .btn-submit {
   background-color: #163e70;
   border-color:#163e70;
@@ -60,6 +64,10 @@ header .label {
 .btn-submit:focus {
   background-color: #163e70;
   border-color: #163e70;
+  color: white;
+}
+btn-submit:active {
+  background-color: #7db7d2;
   color: white;
 }
 .video {
