@@ -36,12 +36,12 @@ header .label {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.btn-drop, .btn-drop:hover, .btn-drop:focus, btn-drop:active {
+.btn-drop, .btn-drop:hover, .btn-drop:focus, .btn-drop:active {
   background-color: #7db7d2;
   border-color: #7db7d2;
   color: white;
 }
-.btn-submit, .btn-submit:hover, .btn-submit:focus, btn-submit:active {
+.btn-submit, .btn-submit:hover, .btn-submit:focus, .btn-submit:active {
   background-color: #163e70;
   border-color:#163e70;
   color: white;
