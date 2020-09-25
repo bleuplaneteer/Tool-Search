@@ -1,14 +1,24 @@
+h1 > a {
+  color: #163e70;
+}
 html {
   font-family: "Lato",sans-serif;
 }
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
-  padding-bottom: 50px;
-}
+  padding: 25px 0px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
 .sticky {
   position: fixed;
   top: 0;
   width: 100%
+}
+.container {
+  padding-top: 120px;
 }
 header .search-bar {
   display: flex;
@@ -16,25 +26,28 @@ header .search-bar {
   align-items: center;
   flex-direction: row;
   gap: 10px;
+  
 }
 header .label {
   font-size: 1.25em;
   padding-top: 5px;
-  color: black;
-}
-.container {
-  margin: 50px;
 }
 .content {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .inner-content {
-  background: #EEEEEE;
+  border-style: solid;
+  border-width: thin;
+  border-color: #7db7d2;
+  background: white;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
+}
+.btn. .btn:hover, .btn:focus, .btn:active {
+  color: white;
 }
 .btn-drop, .btn-drop:hover, .btn-drop:focus, .btn-drop:active {
   background-color: #7db7d2;
@@ -44,9 +57,6 @@ header .label {
 .btn-submit, .btn-submit:hover, .btn-submit:focus, .btn-submit:active {
   background-color: #163e70;
   border-color:#163e70;
-  color: white;
-}
-.btn, .btn:hover, .btn:focus, .btn:active {
   color: white;
 }
 .video {
